@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="main">
+			<h1>Generate password</h1>
+	<button id="btn">GENERATE</button>
+	</div>
+	<div class="output">
+	</div>
+
+<style>
+	.main{
+		height: auto;
+		width: 100%;
+		background-color: #333;
+		text-align: center;
+		padding: 30px;
+		font-family: sans-serif;
+		color: white;
+	}
+	#btn{
+		background-color: transparent;
+		color: white;
+		border: 1px solid white	;
+		padding: 10px;
+	}
+	#btn:hover{
+		background-color: white;
+		color: #333;
+
+	}
+	.output{
+		text-align: center;
+		margin: 0 auto;
+	}
+</style>
+<script type="text/javascript">
+	let output = document.getElementsByClassName("output")[0];
+	let buttons = ["q","w","e",'r','t','y','u','g','i','@','5','6','1'];
+	let btn = document.getElementById("btn").addEventListener('click',generate);
+	function generate(){
+		let radnom = Math.floor(Math.random()*13);
+		let radnom1 = Math.floor(Math.random()*13);
+		let radnom2 = Math.floor(Math.random()*13);
+		let radnom3 = Math.floor(Math.random()*13);
+		let radnom4 = Math.floor(Math.random()*13);
+		let radnom5 = Math.floor(Math.random()*13);
+		let radnom6 = Math.floor(Math.random()*13);
+		let radnom7 = Math.floor(Math.random()*13);
+
+		output.innerHTML = `<h1>${buttons[radnom]} ${buttons[radnom1]} ${buttons[radnom2]} ${buttons[radnom3]} ${buttons[radnom4]} ${buttons[radnom5]} ${buttons[radnom6]} ${buttons[radnom7]}</h1> `
+
+	}
+</script>
+</body>
+</html>
